@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.philwamba.TeachTap"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +32,32 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "d8f5d60f-f0db-4a26-bd7d-bfedecdaa9a0"
+      }
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": ["js", "json", "ts", "tsx", "jsx"],
+      "maxWorkers": 2,
+      "minifierConfig": {
+        "mangle": {
+          "toplevel": true
+        },
+        "compress": {
+          "toplevel": true
+        },
+        "output": {
+          "ascii_only": true,
+          "comments": false,
+          "beautify": false
+        }
+      }
     }
   }
 }
